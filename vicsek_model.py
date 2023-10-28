@@ -56,7 +56,7 @@ def main():
 		x += vx*tstep
 		y += vy*tstep
 		
-		# Periodic Boundary Conditions applies.
+		# Periodic Boundary Condition applies.
 		x = x % L
 		y = y % L
 		
@@ -68,7 +68,7 @@ def main():
 			sy = np.sum(np.sin(theta[neighbors])) # summation of sinuses...
 			mean_theta[b] = np.arctan2(sy, sx) # mean angle...
 			
-		# Random Perturbation are added to angles.
+		# Random Perturbations are added to angles.
 		theta = mean_theta + eta*(np.random.rand(N,1)-0.5)
 		
 		# Updating velocities.
